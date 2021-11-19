@@ -18,9 +18,5 @@ export abstract class Character extends Thing {
     sketch.image(this.image, this.position, this.y, this.size, this.size);
   }
 
-  // getBasePosition = () => [this.position, this.florHeight] as const;
-
-  // getSize = () => this.size;
-
-  // setY = (y: number) => this.y = y;
+  protected realSizeOffset: [number, number] = [0, 0];
 }

@@ -20,7 +20,7 @@ export function FlingMixin<TBase extends CharacterConstraint>(Base: TBase, liftF
 
       const canvasContainer = document.getElementById('canvas-container');
       const rect = canvasContainer?.getBoundingClientRect() ?? { x: 0, y: 0 };
-      this._button.position(this.position + rect.x, this.florHeight + rect.y + 10);
+      this._button.position(this.position + rect.x + this.realSizeOffset[0], this.florHeight + rect.y + 10);
 
       this._fall();
     }

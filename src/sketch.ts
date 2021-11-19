@@ -17,6 +17,7 @@ const s = (sketch: p5) => {
     objects.push(new Cow(sketch, 200, florHeight));
     objects.push(new Computer(sketch, 350, florHeight));
     objects.push(new Plane(sketch, 450, florHeight));
+    objects.push(new Cow(sketch, 650, florHeight));
   };
 
   sketch.draw = () => {
