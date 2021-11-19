@@ -1,4 +1,4 @@
-import { Thing, Duck, Cow } from './objects';
+import { Thing, Duck, Cow, Computer, Plane } from './objects';
 import { canBeClicked } from './mixins'
 import p5 from 'p5';
 
@@ -13,10 +13,10 @@ const s = (sketch: p5) => {
     const canvas = sketch.createCanvas(...canvasSize);
     canvas.parent('canvas-container');
 
-    const duck = new Duck(sketch, 70, florHeight);
-    const cow = new Cow(sketch, 200, florHeight);
-    objects.push(duck);
-    objects.push(cow);
+    objects.push(new Duck(sketch, 70, florHeight));
+    objects.push(new Cow(sketch, 200, florHeight));
+    objects.push(new Computer(sketch, 350, florHeight));
+    objects.push(new Plane(sketch, 450, florHeight));
   };
 
   sketch.draw = () => {
