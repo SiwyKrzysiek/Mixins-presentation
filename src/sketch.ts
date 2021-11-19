@@ -1,4 +1,4 @@
-import { Thing, Duck, Cow, Computer, Plane } from './objects';
+import { Drawable, Duck, Cow, Computer, Plane } from './objects';
 import { canBeClicked } from './mixins'
 import p5 from 'p5';
 
@@ -7,7 +7,7 @@ const s = (sketch: p5) => {
 
   const florHeight = canvasSize[1] * 0.85;
 
-  const objects: Thing[] = [];
+  const objects: Drawable[] = [];
 
   sketch.setup = () => {
     const canvas = sketch.createCanvas(...canvasSize);
@@ -24,7 +24,7 @@ const s = (sketch: p5) => {
     drawBackground();
 
     for (const object of objects) {
-      object.draw(sketch, florHeight);
+      object.draw(sketch);
     }
   };
 
