@@ -2,8 +2,8 @@ import p5, { Image } from 'p5';
 import { Character } from './Character';
 
 export abstract class Machine extends Character {
-  private cycleCount = 0;
-  private thoughts: string;
+  protected cycleCount = 0;
+  protected thoughts: string;
 
   constructor(sketch: p5, position: number, florHeight: number, image: Image | string, size: number) {
     super(sketch, position, florHeight, image, size);
