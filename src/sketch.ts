@@ -1,4 +1,4 @@
-import { Character, Thing, Animal, canBeClicked } from './objects';
+import { Thing, Animal, canBeClicked, Duck, Cow } from './objects';
 import p5 from 'p5';
 
 const s = (sketch: p5) => {
@@ -12,8 +12,10 @@ const s = (sketch: p5) => {
     const canvas = sketch.createCanvas(...canvasSize);
     canvas.parent('canvas-container');
 
-    const duck = new Animal(sketch, 60, florHeight, 'assets/rubber-duck.png');
+    const duck = new Duck(sketch, 70, florHeight);
+    const cow = new Cow(sketch, 200, florHeight);
     objects.push(duck);
+    objects.push(cow);
   };
 
   sketch.draw = () => {
@@ -26,10 +28,10 @@ const s = (sketch: p5) => {
     }
   };
 
-  sketch.mousePressed = (e: MouseEvent) => {
+  sketch.mousePressed = (_e: MouseEvent) => {
     for (const object of objects) {
       if (canBeClicked(object)) {
-        object.click(e.clientX, e.clientY)
+        object.click(sketch.mouseX, sketch.mouseY);
       }
     }
   }
@@ -37,6 +39,7 @@ const s = (sketch: p5) => {
   const drawBackground = () => {
     const florMargin = 50;
 
+    sketch.clear();
     sketch.line(florMargin, florHeight, sketch.width - florMargin, florHeight);
   }
 };
