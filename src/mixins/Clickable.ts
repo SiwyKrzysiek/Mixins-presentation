@@ -1,4 +1,4 @@
-import { GConstructor } from 'typeHelpers';
+import { GConstructor } from '../typeHelpers';
 
 export interface Clickable {
   clickedInside: (x: number, y: number) => boolean;

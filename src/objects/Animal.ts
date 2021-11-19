@@ -1,5 +1,5 @@
 import p5, { Image } from 'p5';
-import { Clickable, ClickableMixin } from '.';
+import { Clickable, ClickableMixin } from '../mixins';
 import { Character } from './Character';
 
 class InternalAnimal extends Character implements Clickable {

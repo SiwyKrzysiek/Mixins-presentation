@@ -1,4 +1,5 @@
-import { Thing, Animal, canBeClicked, Duck, Cow } from './objects';
+import { Thing, Duck, Cow } from './objects';
+import { canBeClicked } from './mixins'
 import p5 from 'p5';
 
 const s = (sketch: p5) => {
@@ -21,8 +22,6 @@ const s = (sketch: p5) => {
   sketch.draw = () => {
     drawBackground();
 
-    // const duck = new Character(60, 1, '/assets/rubber-duck.png');
-    // duck.draw(sketch, florHeight);
     for (const object of objects) {
       object.draw(sketch, florHeight);
     }
