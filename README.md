@@ -1,6 +1,6 @@
 # Mixins presentation
 
-On the 19th of November 2021, I've given a presentation on the topic of the Mixin pattern. This event was a part of a cyclic, internal Technical Dojo initiative in the Predica.
+On the 19th of November 2021, I've given a presentation on the topic of the Mixin pattern. This event was a part of a cyclic, internal Technical Dojo initiative at Predica.
 
 ![Technical Dojo graphic](graphics/dojo.png)
 
